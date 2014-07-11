@@ -6,7 +6,7 @@
 # catalog-version 1.0b
 Name:		texlive-wnri-latex
 Version:	1.0b
-Release:	7
+Release:	8
 Summary:	LaTeX support for wnri fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/wnri-latex
