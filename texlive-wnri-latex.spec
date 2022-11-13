@@ -1,19 +1,13 @@
-# revision 22338
-# category Package
-# catalog-ctan /macros/latex/contrib/wnri-latex
-# catalog-date 2011-05-06 00:56:07 +0200
-# catalog-license gpl2
-# catalog-version 1.0b
 Name:		texlive-wnri-latex
-Version:	1.0b
-Release:	11
+Version:	22338
+Release:	1
 Summary:	LaTeX support for wnri fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/wnri-latex
 License:	GPL2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ Requires(post):	texlive-kpathsea
 LaTeX support for the fonts.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,23 +40,11 @@ LaTeX support for the fonts.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0b-2
-+ Revision: 757543
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0b-1
-+ Revision: 719911
-- texlive-wnri-latex
-- texlive-wnri-latex
-- texlive-wnri-latex
-
