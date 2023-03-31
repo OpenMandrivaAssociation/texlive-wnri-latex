@@ -1,6 +1,6 @@
 Name:		texlive-wnri-latex
 Version:	22338
-Release:	1
+Release:	2
 Summary:	LaTeX support for wnri fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/wnri-latex
