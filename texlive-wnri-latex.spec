@@ -3,7 +3,7 @@ Version:	22338
 Release:	2
 Summary:	LaTeX support for wnri fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/wnri-latex
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/wnri-latex
 License:	GPL2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/wnri-latex.doc.r%{version}.tar.xz
